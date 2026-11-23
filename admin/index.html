@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>waffle · personel</title>
+  <meta name="theme-color" content="#f3ecdf">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,520;0,9..144,620;1,9..144,520&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <main id="login" class="login">
+    <a class="brand" href="../index.html">waffle</a>
+    <p class="kicker">Personel</p>
+    <h1>Sipariş buradan yürür.</h1>
+    <p class="lede">Garson masadaki siparişi kaydeder. Kayıt aynı anda kasaya ve mutfağa bildirim olarak düşer. Siteden gelen gel-al notları da bu kuyruğa eklenir.</p>
+    <form id="login-form">
+      <label>Hesap
+        <select name="user">
+          <option value="garson">Garson</option>
+          <option value="kasa">Kasa</option>
+          <option value="mutfak">Mutfak</option>
+        </select>
+      </label>
+      <label>Şifre
+        <input name="password" type="password" autocomplete="current-password" required>
+      </label>
+      <button class="btn" type="submit">Giriş</button>
+      <p id="login-error" class="hint" role="status"></p>
+    </form>
+    <ul class="accounts">
+      <li><span>Garson</span> garson · 1234</li>
+      <li><span>Kasa</span> kasa · 1234</li>
+      <li><span>Mutfak</span> mutfak · 1234</li>
+    </ul>
+  </main>
+
+  <div id="shell" class="shell" hidden>
+    <header class="top">
+      <a class="brand" href="../index.html">waffle</a>
+      <p id="role-label"></p>
+      <button id="logout" class="text-btn" type="button">Çıkış</button>
+    </header>
+
+    <section id="panel-garson" class="panel garson" hidden>
+      <div>
+        <p class="kicker">Garson</p>
+        <h2>Masayı seç, ürünü ekle.</h2>
+        <div id="tables" class="tables" role="group" aria-label="Masalar"></div>
+        <div id="menu" class="menu"></div>
+      </div>
+      <aside class="ticket">
+        <p class="kicker">Fiş</p>
+        <h3 id="ticket-title">Masa seçilmedi</h3>
+        <ul id="ticket-lines"></ul>
+        <label>Not
+          <textarea id="ticket-note" placeholder="Az çikolata, mum yok."></textarea>
+        </label>
+        <p id="ticket-total" class="total">0 TL</p>
+        <button id="send-order" class="btn" type="button">Kasaya ve mutfağa gönder</button>
+        <p id="send-status" class="hint" role="status"></p>
+      </aside>
+    </section>
+
+    <section id="panel-kasa" class="panel queue" hidden>
+      <div class="ciro" id="ciro">
+        <div>
+          <p class="kicker" id="ciro-day">Bugün</p>
+          <p class="ciro-sum" id="ciro-sum">0 TL</p>
+          <p class="hint" id="ciro-meta"></p>
+        </div>
+        <ul class="ciro-split" id="ciro-split"></ul>
+      </div>
+      <div class="queue-head">
+        <div>
+          <p class="kicker">Kasa</p>
+          <h2>Açık hesaplar</h2>
+        </div>
+        <p id="kasa-count" class="hint"></p>
+      </div>
+      <div id="kasa-list" class="tickets"></div>
+      <div class="queue-head paid-head">
+        <h2>Bugün kapanan</h2>
+      </div>
+      <ul id="paid-list" class="paid-list"></ul>
+    </section>
+
+    <section id="panel-mutfak" class="panel queue" hidden>
+      <div class="queue-head">
+        <div>
+          <p class="kicker">Mutfak</p>
+          <h2>Izgaradaki işler</h2>
+        </div>
+        <p id="mutfak-count" class="hint"></p>
+      </div>
+      <div id="mutfak-list" class="tickets"></div>
+    </section>
+
+    <div id="toasts" class="toasts" aria-live="assertive"></div>
+  </div>
+
+  <script src="../js/orders.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

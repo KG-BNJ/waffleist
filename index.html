@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>waffle</title>
+  <meta name="description" content="İstanbul’da küçük bir butik tatlı vitrini. Ana iş waffle. Adres, saat ve fiyatlar örnektir.">
+  <meta name="theme-color" content="#f3ecdf">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,620;1,9..144,500;1,9..144,620&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#icerik">İçeriğe geç</a>
+  <header class="site-header">
+    <a class="logo" href="#ust">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2" y="2" width="8" height="8" rx="1.2" fill="currentColor"/>
+        <rect x="14" y="2" width="8" height="8" rx="1.2" fill="currentColor"/>
+        <rect x="2" y="14" width="8" height="8" rx="1.2" fill="currentColor"/>
+        <rect x="14" y="14" width="8" height="8" rx="1.2" fill="#e2b56a"/>
+      </svg>
+      waffle
+    </a>
+    <nav id="site-nav" class="site-nav" aria-label="Sayfa">
+      <a href="#menu">Menü</a>
+      <a href="#servis">Servis</a>
+      <a href="#vitrin">Vitrin</a>
+      <a href="#hikaye">Hikâye</a>
+      <a href="#dukkan">Dükkân</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+    <div class="header-actions">
+      <p class="hours-pill">Her gün 12:00–23:00</p>
+      <button class="btn" type="button" data-open-order>Sipariş notu</button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menüyü aç">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="icerik">
+    <section class="wrap hero" id="ust">
+      <div>
+        <p class="kicker">Örnek dükkân · Cihangir</p>
+        <h1>Çıtır kenar,<br><em>yumuşak orta.</em></h1>
+        <p class="lede">Izgara her siparişte yeniden ısınır. Çikolata o sabah eritilir, çilek tezgahtan gelir. Küçük bir tatlıcı; masanın ortasında her zaman waffle durur.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#menu">Menüyü aç</a>
+          <a class="btn ghost" href="#dukkan">Dükkânı bul</a>
+        </div>
+        <ul class="facts">
+          <li><span>Saat</span><strong>12:00–23:00</strong></li>
+          <li><span>Salon</span><strong>8 masa</strong></li>
+          <li><span>Son ızgara</span><strong>22:30</strong></li>
+        </ul>
+      </div>
+      <div class="hero-visual">
+        <img src="assets/stack-straw.jpg" alt="İki sade waffle, beyaz tabakta taze çilek dilimleriyle">
+        <figure class="hero-detail">
+          <img src="assets/hero.jpg" alt="Krema, çilek ve waffle gözlerine akan sosun yakın planı">
+        </figure>
+        <p class="stamp">örnek<br>vitrin</p>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Sütlü çikolata · Bitter · Antep fıstığı · Çilek · Muz · Karamel · Fındık · Kaymak · Orman meyvesi ·&nbsp;</span>
+        <span>Sütlü çikolata · Bitter · Antep fıstığı · Çilek · Muz · Karamel · Fındık · Kaymak · Orman meyvesi ·&nbsp;</span>
+      </div>
+    </div>
+
+    <section class="section" id="servis">
+      <div class="wrap servis">
+        <div>
+          <p class="kicker">01 — Servis</p>
+          <h2>Aynı ızgara, üç hâl.</h2>
+          <div class="tabs" role="tablist" aria-label="Servis biçimi">
+            <button type="button" role="tab" id="tab-tabak" data-servis="tabak" aria-selected="true" aria-controls="servis-text">Tabak</button>
+            <button type="button" role="tab" id="tab-kase" data-servis="kase" aria-selected="false" tabindex="-1" aria-controls="servis-text">Kase</button>
+            <button type="button" role="tab" id="tab-durum" data-servis="durum" aria-selected="false" tabindex="-1" aria-controls="servis-text">Dürüm</button>
+          </div>
+          <p id="servis-text" role="tabpanel">Izgara bütün gelir. Sos kenarda durur, çilek ve krema üsttedir. Oturup, çatalla, acele etmeden.</p>
+        </div>
+        <figure class="servis-photo">
+          <img id="servis-img" src="assets/plain-berry.jpg" alt="Çilek, krema ve nane ile servis edilmiş waffle tabağı">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="wrap">
+        <div class="menu-head">
+          <div>
+            <p class="kicker">02 — Menü</p>
+            <h2>Sekiz reçete.</h2>
+          </div>
+          <p>Uzun liste yok. Çikolata, meyve ya da sade; gerisi vitrinde söylenir. Fiyatlar örnektir.</p>
+        </div>
+
+        <div class="film">
+          <figure>
+            <img src="assets/stack-straw.jpg" alt="İki sade waffle, beyaz tabakta taze çilek dilimleriyle">
+            <figcaption><strong>Çilekli</strong><span>340 TL</span></figcaption>
+          </figure>
+          <figure>
+            <img src="assets/hero.jpg" alt="Krema, çilek ve waffle gözlerine akan bitter sos">
+            <figcaption><strong>Krema</strong><span>sos ile</span></figcaption>
+          </figure>
+          <figure>
+            <img src="assets/sugar.jpg" alt="Pudra şeker serpilmiş waffle ve iri çilekler">
+            <figcaption><strong>Çilek & pudra</strong><span>yakın plan</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="filters" role="group" aria-label="Menüyü süz">
+          <button type="button" data-filter="hepsi" aria-pressed="true">Tümü</button>
+          <button type="button" data-filter="cikolata" aria-pressed="false">Çikolata</button>
+          <button type="button" data-filter="meyve" aria-pressed="false">Meyve</button>
+          <button type="button" data-filter="fistik" aria-pressed="false">Fıstık</button>
+          <button type="button" data-filter="sade" aria-pressed="false">Sade</button>
+        </div>
+
+        <div class="menu-list">
+          <article class="dish" data-item data-name="Çilekli" data-price="340" data-serve="Tabak" data-tags="meyve cikolata">
+            <span class="num">01</span>
+            <div>
+              <h3>Çilekli</h3>
+              <p>Sütlü çikolata, taze çilek, krema, kavrulmuş fındık</p>
+            </div>
+            <span class="serve">Tabak</span>
+            <strong class="price">340 TL</strong>
+            <button class="note-btn" type="button" data-order="Çilekli">Not al</button>
+          </article>
+          <article class="dish" data-item data-name="Orman" data-price="360" data-serve="Tabak" data-tags="meyve">
+            <span class="num">02</span>
+            <div>
+              <h3>Orman</h3>
+              <p>Beyaz çikolata, böğürtlen, ahududu, yaban mersini</p>
+            </div>
+            <span class="serve">Tabak</span>
+            <strong class="price">360 TL</strong>
+            <button class="note-btn" type="button" data-order="Orman">Not al</button>
+          </article>
+          <article class="dish" data-item data-name="Antep" data-price="390" data-serve="Tabak" data-tags="fistik">
+            <span class="num">03</span>
+            <div>
+              <h3>Antep</h3>
+              <p>Fıstık kreması, kaymak, çekilmiş antep fıstığı</p>
+            </div>
+            <span class="serve">Tabak</span>
+            <strong class="price">390 TL</strong>
+            <button class="note-btn" type="button" data-order="Antep">Not al</button>
+          </article>
+          <article class="dish" data-item data-name="Bitter" data-price="350" data-serve="Tabak" data-tags="cikolata">
+            <span class="num">04</span>
+            <div>
+              <h3>Bitter</h3>
+              <p>Yüzde yetmiş bitter, muz, deniz tuzu</p>
+            </div>
+            <span class="serve">Tabak</span>
+            <strong class="price">350 TL</strong>
+            <button class="note-btn" type="button" data-order="Bitter">Not al</button>
+          </article>
+          <article class="dish" data-item data-name="Karamel" data-price="360" data-serve="Kase" data-tags="cikolata">
+            <span class="num">05</span>
+            <div>
+              <h3>Karamel</h3>
+              <p>Tuzlu karamel, muz, kavrulmuş fındık</p>
+            </div>
+            <span class="serve">Kase</span>
+            <strong class="price">360 TL</strong>
+            <button class="note-btn" type="button" data-order="Karamel">Not al</button>
+          </article>
+          <article class="dish" data-item data-name="Sade" data-price="240" data-serve="Tabak" data-tags="sade">
+            <span class="num">06</span>
+            <div>
+              <h3>Sade</h3>
+              <p>Tereyağı, pudra şekeri</p>
+            </div>
+            <span class="serve">Tabak</span>
+            <strong class="price">240 TL</strong>
+            <button class="note-btn" type="button" data-order="Sade">Not al</button>
+          </article>
+          <article class="dish" data-item data-name="Gece" data-price="380" data-serve="Tabak" data-tags="cikolata">
+            <span class="num">07</span>
+            <div>
+              <h3>Gece</h3>
+              <p>Bitter, espresso, vanilyalı dondurma</p>
+            </div>
+            <span class="serve">Tabak</span>
+            <strong class="price">380 TL</strong>
+            <button class="note-btn" type="button" data-order="Gece">Not al</button>
+          </article>
+          <article class="dish" data-item data-name="Dürüm" data-price="320" data-serve="Dürüm" data-tags="cikolata meyve">
+            <span class="num">08</span>
+            <div>
+              <h3>Dürüm</h3>
+              <p>Sütlü çikolata, muz, çilek, fındık</p>
+            </div>
+            <span class="serve">Dürüm</span>
+            <strong class="price">320 TL</strong>
+            <button class="note-btn" type="button" data-order="Dürüm">Not al</button>
+          </article>
+        </div>
+        <p id="menu-empty" class="menu-empty" hidden>Bu süzgeçte reçete yok.</p>
+        <p class="fine">Fındık, süt ve gluten içerir. Fiyatlar ve malzeme listesi örnektir.</p>
+      </div>
+    </section>
+
+    <section class="section" id="vitrin">
+      <div class="wrap">
+        <div class="block-head">
+          <div>
+            <p class="kicker">03 — Vitrin</p>
+            <h2>Waffle’ın yanında duranlar.</h2>
+          </div>
+          <p>Az şey var. Hepsi aynı tezgahta, aynı gün biter.</p>
+        </div>
+        <div class="vitrin-grid">
+          <figure class="v-card v-large">
+            <img src="assets/pistachio.jpg" alt="Çilekli krema kupları, bardakta katmanlı tatlı">
+            <figcaption><strong>Çilekli magnolia</strong><span>220 TL</span></figcaption>
+          </figure>
+          <div class="v-side">
+            <figure class="v-card">
+              <img src="assets/brownie.jpg" alt="Üzerine çikolata sos dökülen brownie dilimleri">
+              <figcaption><strong>Brownie</strong><span>180 TL</span></figcaption>
+            </figure>
+            <div class="drink-card">
+              <span>Fincan</span>
+              <strong>Sıcak çikolata ve filtre kahve</strong>
+              <span>140 TL · 95 TL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="hikaye">
+      <div class="wrap">
+        <div class="story">
+          <img src="assets/waffle-berry.jpg" alt="Tahta tepside iki sade waffle, yaban mersini ve bal">
+          <div>
+            <p class="kicker">04 — Hikâye</p>
+            <h2>On iki kişilik salon. Bir ızgara.</h2>
+            <p>Dükkân küçük. Izgara tezgâhın arkasında, vitrin sokağa bakıyor. İçeri giren önce kokuyu, sonra kısa menüyü görür.</p>
+            <p>Sabah hamur yoğrulur. Öğlen ilk ızgara iner. Akşam sekiz masa dolar; yer kalmazsa dürüm kâğıda sarılır.</p>
+            <div class="principles">
+              <div><strong>Hamur</strong><span>Günün ilk işi, tereyağıyla.</span></div>
+              <div><strong>Çikolata</strong><span>Sekiz çeşit, hepsi aynı gün.</span></div>
+              <div><strong>Meyve</strong><span>O sabahın tezgâhından.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="dukkan">
+      <div class="wrap">
+        <div class="block-head">
+          <div>
+            <p class="kicker">05 — Dükkân</p>
+            <h2>Cihangir’de, örnek bir kapı.</h2>
+          </div>
+          <p>Harita semti gösterir. Sokak, numara ve telefon gerçek bir işletmeye ait değildir.</p>
+        </div>
+        <div class="visit">
+          <div class="receipt">
+            <h2>Gel, otur ya da al çık.</h2>
+            <dl>
+              <div>
+                <dt>Adres</dt>
+                <dd>Örnek Sokak No: 12<br>Cihangir, Beyoğlu<br>34433 İstanbul</dd>
+              </div>
+              <div>
+                <dt>Saat</dt>
+                <dd>Her gün 12:00–23:00<br>Son ızgara 22:30</dd>
+              </div>
+              <div>
+                <dt>Ulaşım</dt>
+                <dd><a href="tel:+902125550187">0212 555 01 87</a><br><a href="mailto:merhaba@waffle.ornek">merhaba@waffle.ornek</a></dd>
+              </div>
+            </dl>
+            <p class="fine">Örnek bilgiler. Kapı numarası uydurmadır.</p>
+          </div>
+          <div class="map-card">
+            <iframe title="Cihangir örneği harita" src="https://www.openstreetmap.org/export/embed.html?bbox=28.9750%2C41.0280%2C28.9920%2C41.0380&amp;layer=mapnik&amp;marker=41.0328%2C28.9836"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="iletisim">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="kicker">06 — İletişim</p>
+          <h2>Kısa bir not bırak.</h2>
+          <p class="lede">Masa, doğum günü tabağı ya da sadece “bugün Antep var mı”. Form örnektir, mesaj gitmez.</p>
+          <div class="contact-points">
+            <a href="tel:+902125550187"><span>Telefon</span>0212 555 01 87</a>
+            <a href="mailto:merhaba@waffle.ornek"><span>E-posta</span>merhaba@waffle.ornek</a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener"><span>Instagram</span>@waffle.ornek</a>
+          </div>
+        </div>
+        <form id="contact-form">
+          <div class="fields">
+            <label>Ad
+              <input name="name" type="text" autocomplete="name" required>
+            </label>
+            <label>Telefon
+              <input name="phone" type="tel" autocomplete="tel" placeholder="05xx">
+            </label>
+          </div>
+          <label>Mesaj
+            <textarea name="message" required placeholder="Örnek: yarın 16:00, iki kişilik Çilekli."></textarea>
+          </label>
+          <button class="btn" type="submit">Notu bırak</button>
+          <p id="contact-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <a class="logo" href="#ust">waffle</a>
+      <p>Örnek site. İsim yok; vitrinde yalnızca waffle yazar. Adres, telefon, saat ve fiyatlar gerçek bir işletmeye ait değildir. Fotoğraflar Wikimedia Commons ve Unsplash. <a href="admin/index.html">Personel girişi</a></p>
+    </div>
+  </footer>
+
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+      <div class="drawer-top">
+        <h2 id="drawer-title">Sipariş notu</h2>
+        <button class="icon-btn" id="drawer-close" type="button" aria-label="Kapat">×</button>
+      </div>
+      <p class="hint">Not, örnek numarada WhatsApp taslağı açar. Aynı kayıt kasa ve mutfak ekranına da düşer.</p>
+      <form id="order-form">
+        <label>Waffle
+          <select id="order-item" name="item"></select>
+        </label>
+        <label>Servis
+          <select id="order-serve" name="serve">
+            <option>Tabak</option>
+            <option>Kase</option>
+            <option>Dürüm</option>
+          </select>
+        </label>
+        <label>Not
+          <textarea id="order-note" name="note" placeholder="Az çikolata, muz olmasın."></textarea>
+        </label>
+        <p id="order-preview"></p>
+        <button class="btn full" type="submit">WhatsApp taslağını aç</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/orders.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
